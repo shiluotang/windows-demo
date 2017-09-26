@@ -8,14 +8,21 @@ namespace org {
 
         class form {
             public:
-                void setName(xstring const&);
-                xstring getName() const;
+                form();
+                form(form const&);
+                virtual ~form();
 
-                size_t getWidth() const;
-                void setWidth(size_t);
+                form& name(xstring const&);
+                xstring name() const;
 
-                size_t getHeight() const;
-                void setHeight(size_t);
+                size_t width() const;
+                form& width(size_t);
+
+                size_t height() const;
+                form& height(size_t);
+            protected:
+                struct impl_data;
+                impl_data *_M_data;
         };
     }
 }
