@@ -34,6 +34,6 @@ test1_SOURCES = \
 				./tests/test1.cxx \
 				./tests/test1.rc
 test1_CPPFLAGS = $(AM_CPPFLAGS) -DUNICODE -D_UNICODE
-test1_LDFLAGS = $(AM_LDFLAGS) -lcomctl32 -all-static
+test1_LDFLAGS = $(AM_LDFLAGS) -lcomctl32 -mwindows -all-static
 
 TESTS = $(check_PROGRAMS)

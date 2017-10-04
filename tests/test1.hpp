@@ -5,7 +5,12 @@
 #   include <w32api.h>
 #endif
 
-#define _WIN32_IE _WIN32_IE_IE30
+#ifndef _WIN32_IE
+#   ifndef _WIN32_IE_IE30
+#       define _WIN32_IE_IE30 0x0300
+#   endif
+#   define _WIN32_IE _WIN32_IE_IE30
+#endif
 
 #include <windows.h>
 #include <commctrl.h>
