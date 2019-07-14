@@ -22,18 +22,18 @@ lib_LTLIBRARIES = libwindowxx.la
 
 libwindowxx_la_CPPFLAGS = $(AM_CPPFLAGS)
 libwindowxx_la_SOURCES = \
-						 ./src/form.cpp \
-						 ./src/icon.cpp \
-						 ./src/menu.cpp \
-						 ./src/cursor.cpp
-libwindowxx_la_LDFLAGS = $(AM_LDFLAGS) -lcomctl32 -static-libgcc
+./src/form.cpp \
+./src/icon.cpp \
+./src/menu.cpp \
+./src/cursor.cpp
+libwindowxx_la_LDFLAGS = $(AM_LDFLAGS) -lcomctl32
 
 check_PROGRAMS = test1
 
 test1_SOURCES = \
-				./tests/test1.cxx \
-				./tests/test1.rc
+./tests/test1.cxx \
+./tests/test1.rc
 test1_CPPFLAGS = $(AM_CPPFLAGS) -DUNICODE -D_UNICODE
-test1_LDFLAGS = $(AM_LDFLAGS) -lcomctl32 -mwindows -all-static
+test1_LDFLAGS = $(AM_LDFLAGS) -lcomctl32 -mwindows
 
 TESTS = $(check_PROGRAMS)
