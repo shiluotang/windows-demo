@@ -23,7 +23,7 @@
 #define ID_HELP_ABOUT                  40002
 
 #ifndef IDC_STATIC
-  #define IDC_STATIC                   -1
+#   define IDC_STATIC                   -1
 #endif
 
 #endif // TEST1_HPP_INCLUDED
